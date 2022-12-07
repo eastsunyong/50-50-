@@ -43,4 +43,6 @@ ssr과 csr 사진
     + SSR은 사용자 정보를 서버 측에서 세션으로 관리를 하지만, CSR은 쿠키 말고는 사용자 정보를 저장할 공간이 마땅치 않다.
 
 
+![image](https://user-images.githubusercontent.com/108984141/206188694-3b125c2b-b5aa-40b0-9bce-b20dafd2987e.png)
+
    
