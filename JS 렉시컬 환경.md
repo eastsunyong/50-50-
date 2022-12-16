@@ -47,3 +47,5 @@
 [ let, const ]
 
 초기화- key : 변수이름- value : <uninitialized>  ( 참조 불가능 )
+
+  
