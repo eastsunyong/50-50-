@@ -1,6 +1,6 @@
 ### JavaScript의 자료형과 JavaScript만의 특성은 무엇일까 ?
 
-- 느슨한 타입의 동적언어
+- 1 느슨한 타입의 동적언어
 
 JavaScript는 느슨한 타입의 동적 언어이다. JS의 변수는 어떤 특정한 타입과 연결되지 않으며, 모든 타입으로 할당 및 재할당이 가능하다.변수의 타입을 미리 선언할 필요가 없다. 프로그램이 처리되는 과정에서 자동으로 파악되고, 이 말은 결국 같은 변수에도 불구하고 상황에 따라 값의 타입이 바뀔 수 있다는 뜻이기도 하다.
 
@@ -27,7 +27,16 @@ Js에서의 명시적 형변환은 주로 세 가지가 있다. String() 은 문
 2. Number()
 
 ```jsx
-console.log(Number(''));// 0console.log(Number('abc'));// NaNconsole.log(Number('123'));// 123console.log(Number('123a'));// NaNconsole.log(Number(true));// 1console.log(Number(false));// 0console.log(Number(null));// 0console.log(Number(undefined));// NaNconsole.log(Number({name: 'bigtop'}));// NaNconsole.log(Number({}));// NaN
+console.log(Number(''));// 0
+console.log(Number('abc'));// NaN
+console.log(Number('123'));// 123
+console.log(Number('123a'));// NaN
+console.log(Number(true));// 1
+console.log(Number(false));// 0
+console.log(Number(null));// 0
+console.log(Number(undefined));// NaN
+console.log(Number({name: 'bigtop'}));// NaN
+console.log(Number({}));// NaN
 ```
 
 가장 먼저 볼 수 있는 빈 문자열은 0으로 변환된다.
@@ -53,7 +62,17 @@ Boolean 형태는 당연히 true 혹은 false 두 가지 값으로 변형되는�
 1. 덧셈 연산자  **( + )**
 
 ```jsx
-// stringconsole.log('문자' + 1234);// 문자1234console.log('문자' + true);// 문자true// numberconsole.log(1234 + '1234');//12341234console.log(1234 + true);// 1235// booleanconsole.log(true + 123);// 124console.log(false + 123);// 123
+// string
+console.log('문자' + 1234);// 문자1234
+console.log('문자' + true);// 문자true
+
+// number
+console.log(1234 + '1234');//12341234
+console.log(1234 + true);// 1235
+
+// boolean
+console.log(true + 123);// 124
+console.log(false + 123);// 123
 ```
 
 연산을 할 때는 피연산자가 한쪽이라도 '문자열'이면 문자열 연산이 된다.
@@ -65,7 +84,17 @@ Boolean 형태는 당연히 true 혹은 false 두 가지 값으로 변형되는�
 2. 관계 연산자  ( <, <=, >, >= )
 
 ```jsx
-// stringconsole.log('a' <= 'b');// trueconsole.log('a' <= 1234);// false// numberconsole.log(1234 <= 1234);// trueconsole.log(1234 <= true);// false// booleanconsole.log(false <= true);// trueconsole.log(false <= false);// true
+// string
+console.log('a' <= 'b');// true
+console.log('a' <= 1234);// false
+
+// number
+console.log(1234 <= 1234);// true
+console.log(1234 <= true);// false
+
+// boolean
+console.log(false <= true);// true
+console.log(false <= false);// true
 ```
 
 관계 연산자도 산술연산과 동일하다. 양쪽 모두 문자열인 경우를 제외하면 양쪽 모두 숫자형으로 형 변환을 일으킨 후 연산한다. 관계 연산자도 산술연산과 동일하다. 양쪽 모두 문자열인 경우를 제외하면 양쪽 모두 숫자형으로 형 변환을 일으킨 후 연산한다.
@@ -73,7 +102,23 @@ Boolean 형태는 당연히 true 혹은 false 두 가지 값으로 변형되는�
 3.  **논리 연산자(&&, ||, !)**
 
 ```jsx
-// stringconsole.log('문자' && 1234);// 1234console.log('문자' && true);// trueconsole.log('문자' || 1234);// 문자console.log('문자' || true);// 문자// numberconsole.log(1234 && 1234);// 1234console.log(1234 && true);// trueconsole.log(1234 || 1234);// 1234console.log(1234 || true);// 1234// booleanconsole.log(true && true);// trueconsole.log(true && false);// falseconsole.log(true && null);// nullconsole.log(true && undefined);// undefined
+// string
+console.log('문자' && 1234);// 1234
+console.log('문자' && true);// true
+console.log('문자' || 1234);// 문자
+console.log('문자' || true);// 문자
+
+// number
+console.log(1234 && 1234);// 1234
+console.log(1234 && true);// true
+console.log(1234 || 1234);// 1234
+console.log(1234 || true);// 1234
+
+// boolean
+console.log(true && true);// true
+console.log(true && false);// false
+console.log(true && null);// null
+console.log(true && undefined);// undefined
 ```
 
 - undefined와 null의 미세한 차이들을 비교해보세요.
