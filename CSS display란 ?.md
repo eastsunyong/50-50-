@@ -86,3 +86,4 @@ body div {
 - 만약 width와 height를 지정하지 않을 경우, inline과 같이 컨텐츠만큼 영역이 잡힌다.
 - 참고로 Explorer 7 이하에서는 **사용할 수 없다.**
 
+
