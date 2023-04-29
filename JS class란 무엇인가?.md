@@ -86,3 +86,4 @@ let kim = new Korean("KIMJINYOUNG",24);
 ```
 
 `Korean` 클래스를 이용해 `kim` 객체를 만들면 위와 같은 instance가 생성된다.
+
